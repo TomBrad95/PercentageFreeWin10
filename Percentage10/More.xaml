@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="Percentage10.More"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Percentage10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SplitView x:Name="MySplitView" 
+               IsPaneOpen="False"
+               DisplayMode="CompactOverlay"
+               OpenPaneLength="175"
+               CompactPaneLength="50">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="Sizes">
+                <VisualState x:Name="_720">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_About.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                130,0,0,0
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txt_About.Width" Value="380"/>
+                        <Setter Target="txt_About.FontSize" Value="40"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="_1080">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_About.Width" Value="460"/>
+                        <Setter Target="txt_About.FontSize" Value="40"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1080"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="_1920">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_About.Width" Value="540"/>
+                        <Setter Target="txt_About.FontSize" Value="40"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1920"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Home" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;" Width="50" Height="50" Background="Transparent" Click="btn_Home_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="homeButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Help" FontFamily="Segoe MDL2 Assets" Content="&#xE11B;" Width="50" Height="50" Background="Transparent" Click="btn_Help_Click"/>
+                    <TextBlock FontSize="18" VerticalAlignment="Center" x:Uid="helpButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Contact" FontFamily="Segoe MDL2 Assets" Content="&#xE168;" Width="50" Height="50" Background="Transparent" Click="btn_Contact_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="contactButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="MoreButton" FontFamily="Segoe MDL2 Assets" Content="&#xE896;" Width="50" Height="50" Background="Transparent" Click="MoreButton_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="moreButton"/>
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <RelativePanel x:Name="TheRelativePanel" HorizontalAlignment="Center">
+                    <TextBlock Width="auto" Height="50" FontSize="25" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,26,0,0" x:Uid="DecisionName"/>
+                    <TextBlock Width="auto" Height="50" FontSize="20" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,80,0,0" x:Uid="DecisionPrice"/>
+                    <Button x:Name="Decision" Width="250" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="150" FontSize="20" Click="Decision_Click"/>
+                    <TextBlock RelativePanel.Below="Decision" Width="auto" Height="50" FontSize="25" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,46,0,0" Text="Bill Split"/>
+                    <TextBlock RelativePanel.Below="Decision" Width="auto" Height="50" FontSize="20" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,100,0,0" x:Uid="splitPrice"/>
+                    <Button x:Name="BillSplit" RelativePanel.Below="Decision" Width="250" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="150" FontSize="20" Margin="0,20,0,0" Click="BillSplit_Click"/>
+                    <TextBlock RelativePanel.Below="BillSplit" Width="auto" Height="50" FontSize="25" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,46,0,0" Text="Headphone Remover"/>
+                    <TextBlock RelativePanel.Below="BillSplit" Width="auto" Height="50" FontSize="20" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,100,0,0" x:Uid="splitPrice"/>
+                    <Button x:Name="Volume" RelativePanel.Below="BillSplit" Width="250" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="150" FontSize="20" Margin="0,11,0,0" Click="Volume_Click"/>
+                </RelativePanel>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+</Page>

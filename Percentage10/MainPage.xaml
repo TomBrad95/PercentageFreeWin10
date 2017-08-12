@@ -1,0 +1,234 @@
+﻿<Page
+    x:Class="Percentage10.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Percentage10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    mc:Ignorable="d">
+
+    <SplitView x:Name="MySplitView"
+               IsPaneOpen="False"
+               DisplayMode="CompactOverlay"
+               OpenPaneLength="175"
+               CompactPaneLength="50">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="Sizes">
+                <VisualState x:Name="_720">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_answer.Width" Value="380"/>
+                        <Setter Target="txt_answer.FontSize" Value="40"/>
+                        <Setter Target="btn_one.FontSize" Value="20"/>
+                        <Setter Target="btn_one.Width" Value="80"/>
+                        <Setter Target="btn_one.Height" Value="80"/>
+                        <Setter Target="btn_two.FontSize" Value="20"/>
+                        <Setter Target="btn_two.Width" Value="80"/>
+                        <Setter Target="btn_two.Height" Value="80"/>
+                        <Setter Target="btn_three.FontSize" Value="20"/>
+                        <Setter Target="btn_three.Width" Value="80"/>
+                        <Setter Target="btn_three.Height" Value="80"/>
+                        <Setter Target="btn_four.FontSize" Value="20"/>
+                        <Setter Target="btn_four.Width" Value="80"/>
+                        <Setter Target="btn_four.Height" Value="80"/>
+                        <Setter Target="btn_five.FontSize" Value="20"/>
+                        <Setter Target="btn_five.Width" Value="80"/>
+                        <Setter Target="btn_five.Height" Value="80"/>
+                        <Setter Target="btn_six.FontSize" Value="20"/>
+                        <Setter Target="btn_six.Width" Value="80"/>
+                        <Setter Target="btn_six.Height" Value="80"/>
+                        <Setter Target="btn_seven.FontSize" Value="20"/>
+                        <Setter Target="btn_seven.Width" Value="80"/>
+                        <Setter Target="btn_seven.Height" Value="80"/>
+                        <Setter Target="btn_eight.FontSize" Value="20"/>
+                        <Setter Target="btn_eight.Width" Value="80"/>
+                        <Setter Target="btn_eight.Height" Value="80"/>
+                        <Setter Target="btn_nine.FontSize" Value="20"/>
+                        <Setter Target="btn_nine.Width" Value="80"/>
+                        <Setter Target="btn_nine.Height" Value="80"/>
+                        <Setter Target="btn_10.FontSize" Value="20"/>
+                        <Setter Target="btn_10.Width" Value="80"/>
+                        <Setter Target="btn_10.Height" Value="80"/>
+                        <Setter Target="btn_25.FontSize" Value="20"/>
+                        <Setter Target="btn_25.Width" Value="80"/>
+                        <Setter Target="btn_25.Height" Value="80"/>
+                        <Setter Target="btn_50.FontSize" Value="20"/>
+                        <Setter Target="btn_50.Width" Value="80"/>
+                        <Setter Target="btn_50.Height" Value="80"/>
+                        <Setter Target="btn_pc.FontSize" Value="20"/>
+                        <Setter Target="btn_pc.Width" Value="80"/>
+                        <Setter Target="btn_pc.Height" Value="80"/>
+                        <Setter Target="btn_zero.FontSize" Value="20"/>
+                        <Setter Target="btn_zero.Width" Value="180"/>
+                        <Setter Target="btn_zero.Height" Value="80"/>
+                        <Setter Target="btn_dec.FontSize" Value="20"/>
+                        <Setter Target="btn_dec.Width" Value="80"/>
+                        <Setter Target="btn_dec.Height" Value="80"/>
+                        <Setter Target="btn_Clear.FontSize" Value="20"/>
+                        <Setter Target="btn_Clear.Width" Value="180"/>
+                        <Setter Target="btn_Clear.Height" Value="80"/>
+                        <Setter Target="btn_Reset.FontSize" Value="20"/>
+                        <Setter Target="btn_Reset.Width" Value="180"/>
+                        <Setter Target="btn_Reset.Height" Value="80"/>
+                        <Setter Target="Ad.Height" Value="250"/>
+                        <Setter Target="Ad.Width" Value="300"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="_1080">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_answer.Width" Value="450"/>
+                        <Setter Target="txt_answer.FontSize" Value="40"/>
+                        <Setter Target="btn_one.Width" Value="100"/>
+                        <Setter Target="btn_one.Height" Value="100"/>
+                        <Setter Target="btn_two.Width" Value="100"/>
+                        <Setter Target="btn_two.Height" Value="100"/>
+                        <Setter Target="btn_three.Width" Value="100"/>
+                        <Setter Target="btn_three.Height" Value="100"/>
+                        <Setter Target="btn_four.Width" Value="100"/>
+                        <Setter Target="btn_four.Height" Value="100"/>
+                        <Setter Target="btn_five.Width" Value="100"/>
+                        <Setter Target="btn_five.Height" Value="100"/>
+                        <Setter Target="btn_six.Width" Value="100"/>
+                        <Setter Target="btn_six.Height" Value="100"/>
+                        <Setter Target="btn_seven.Width" Value="100"/>
+                        <Setter Target="btn_seven.Height" Value="100"/>
+                        <Setter Target="btn_eight.Width" Value="100"/>
+                        <Setter Target="btn_eight.Height" Value="100"/>
+                        <Setter Target="btn_nine.Width" Value="100"/>
+                        <Setter Target="btn_nine.Height" Value="100"/>
+                        <Setter Target="btn_10.Width" Value="100"/>
+                        <Setter Target="btn_10.Height" Value="100"/>
+                        <Setter Target="btn_25.Width" Value="100"/>
+                        <Setter Target="btn_25.Height" Value="100"/>
+                        <Setter Target="btn_50.Width" Value="100"/>
+                        <Setter Target="btn_50.Height" Value="100"/>
+                        <Setter Target="btn_pc.Width" Value="100"/>
+                        <Setter Target="btn_pc.Height" Value="100"/>
+                        <Setter Target="btn_zero.Width" Value="220"/>
+                        <Setter Target="btn_zero.Height" Value="100"/>
+                        <Setter Target="btn_dec.Width" Value="100"/>
+                        <Setter Target="btn_dec.Height" Value="100"/>
+                        <Setter Target="btn_Clear.Width" Value="220"/>
+                        <Setter Target="btn_Clear.Height" Value="100"/>
+                        <Setter Target="btn_Reset.Width" Value="220"/>
+                        <Setter Target="btn_Reset.Height" Value="100"/>
+                        <Setter Target="Ad.Height" Value="90"/>
+                        <Setter Target="Ad.Width" Value="728"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1080"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="_1920">
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed"/>
+                        <Setter Target="txt_answer.Width" Value="540"/>
+                        <Setter Target="txt_answer.FontSize" Value="40"/>
+                        <Setter Target="btn_one.Width" Value="120"/>
+                        <Setter Target="btn_one.Height" Value="120"/>
+                        <Setter Target="btn_two.Width" Value="120"/>
+                        <Setter Target="btn_two.Height" Value="120"/>
+                        <Setter Target="btn_three.Width" Value="120"/>
+                        <Setter Target="btn_three.Height" Value="120"/>
+                        <Setter Target="btn_four.Width" Value="120"/>
+                        <Setter Target="btn_four.Height" Value="120"/>
+                        <Setter Target="btn_five.Width" Value="120"/>
+                        <Setter Target="btn_five.Height" Value="120"/>
+                        <Setter Target="btn_six.Width" Value="120"/>
+                        <Setter Target="btn_six.Height" Value="120"/>
+                        <Setter Target="btn_seven.Width" Value="120"/>
+                        <Setter Target="btn_seven.Height" Value="120"/>
+                        <Setter Target="btn_eight.Width" Value="120"/>
+                        <Setter Target="btn_eight.Height" Value="120"/>
+                        <Setter Target="btn_nine.Width" Value="120"/>
+                        <Setter Target="btn_nine.Height" Value="120"/>
+                        <Setter Target="btn_10.Width" Value="120"/>
+                        <Setter Target="btn_10.Height" Value="120"/>
+                        <Setter Target="btn_25.Width" Value="120"/>
+                        <Setter Target="btn_25.Height" Value="120"/>
+                        <Setter Target="btn_50.Width" Value="120"/>
+                        <Setter Target="btn_50.Height" Value="120"/>
+                        <Setter Target="btn_pc.Width" Value="120"/>
+                        <Setter Target="btn_pc.Height" Value="120"/>
+                        <Setter Target="btn_zero.Width" Value="260"/>
+                        <Setter Target="btn_zero.Height" Value="120"/>
+                        <Setter Target="btn_dec.Width" Value="120"/>
+                        <Setter Target="btn_dec.Height" Value="120"/>
+                        <Setter Target="btn_Clear.Width" Value="260"/>
+                        <Setter Target="btn_Clear.Height" Value="120"/>
+                        <Setter Target="btn_Reset.Width" Value="260"/>
+                        <Setter Target="btn_Reset.Height" Value="120"/>
+                        <Setter Target="Ad.Height" Value="90"/>
+                        <Setter Target="Ad.Width" Value="728"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1920"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Home" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;" Width="50" Height="50" Background="Transparent" Click="btn_Home_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="homeButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Help" FontFamily="Segoe MDL2 Assets" Content="&#xE11B;" Width="50" Height="50" Background="Transparent" Click="btn_Help_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="helpButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Contact" FontFamily="Segoe MDL2 Assets" Content="&#xE168;" Width="50" Height="50" Background="Transparent" Click="btn_Contact_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="contactButton"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="More" FontFamily="Segoe MDL2 Assets" Content="&#xE896;" Width="50" Height="50" Background="Transparent" Click="More_Click"/>
+                    <TextBlock Text="" FontSize="18" VerticalAlignment="Center" x:Uid="moreButton"/>
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <RelativePanel x:Name="TheRelativePanel" HorizontalAlignment="Center">
+                    <TextBlock Height="70" Width="auto" x:Name="txt_answer" RelativePanel.AlignTopWithPanel="True" Margin="2,2,2.4,2.4" FontSize="34"/>
+                    <Button Height="50" Width="50" x:Name="btn_one" Content="1" RelativePanel.Below="txt_answer" Margin="0,0,0,0" Click="btn_one_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_two" Content="2" RelativePanel.RightOf="btn_one" RelativePanel.Below="txt_answer" Margin="20,0,0,0" Click="btn_two_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_three" Content="3" RelativePanel.RightOf="btn_two" RelativePanel.Below="txt_answer" Margin="20,0,0,0" Click="btn_three_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_four" Content="4" RelativePanel.Below="btn_one" Margin="0,20,0,0" Click="btn_four_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_five" Content="5" RelativePanel.RightOf="btn_four" RelativePanel.Below="btn_two" Margin="20,20,0,0" Click="btn_five_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_six" Content="6" RelativePanel.RightOf="btn_five" RelativePanel.Below="btn_three" Margin="20,20,0,0" Click="btn_six_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_seven" Content="7" RelativePanel.Below="btn_four" Margin="0,20,0,0" Click="btn_seven_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_eight" Content="8" RelativePanel.RightOf="btn_seven" RelativePanel.Below="btn_five" Margin="20,20,0,0" Click="btn_eight_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_nine" Content="9" RelativePanel.RightOf="btn_eight" RelativePanel.Below="btn_six" Margin="20,20,0,0" Click="btn_nine_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_10" Content="10%" RelativePanel.RightOf="btn_three" RelativePanel.Below="txt_answer" Margin="20,0,0,0" Click="btn_10_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_25" Content="25%" RelativePanel.RightOf="btn_six" RelativePanel.Below="btn_10" Margin="20,20,0,0" Click="btn_25_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_50" Content="50%" RelativePanel.RightOf="btn_nine" RelativePanel.Below="btn_25" Margin="20,20,0,0" Click="btn_50_Click"/>
+                    <Button Height="50" Width="120" x:Name="btn_zero" Content="0" RelativePanel.Below="btn_seven" Margin="0,20,0,0" Click="btn_zero_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_pc" Content="%" RelativePanel.RightOf="btn_dec" RelativePanel.Below="btn_50" Margin="20,20,0,0" Click="btn_pc_Click"/>
+                    <Button Height="50" Width="50" x:Name="btn_dec" Content="." RelativePanel.RightOf="btn_zero" RelativePanel.Below="btn_nine" Margin="20,20,0,0" Click="btn_dec_Click"/>
+                    <Button Height="50" Width="120" x:Name="btn_Clear" Content="" RelativePanel.Below="btn_zero" Margin="0,20,0,0" Click="btn_Clear_Click" x:Uid="clearingButton"/>
+                    <Button Height="50" Width="120" x:Name="btn_Reset" Content="" RelativePanel.RightOf="btn_Clear" RelativePanel.Below="btn_dec" Margin="20,20,0,0" Click="btn_Reset_Click" x:Uid="resettingButton"/>
+                </RelativePanel>
+                <UI:AdControl 
+                    x:Name="Ad"
+                    ApplicationId="9wzdncrd2c9k"
+                    AdUnitId="346970"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Width="300"/>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+</Page>
